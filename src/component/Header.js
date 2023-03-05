@@ -7,7 +7,7 @@ function Header() {
     return (
         <>
           <header className="header max-width py-5">
-            <div className="flex items-center justify-between">
+            <div className="flex  items-center justify-between">
               <article className="flex items-center">
                 <img src={logo} alt="" />
     
