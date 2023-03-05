@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./component/Header";
+import Footer from "./component/Footer";
+import Boost from "./component/Boost";
+import Advanced from "./component/Advanced";
+import Showcase from "./component/Showcase";
+import Shortner from "./component/Shortener";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     
+      <Header/>
+      <Showcase/>
+      <Shortner/>
+      <Advanced/>
+      <Boost/>
+      <Footer/>
+      
     </div>
   );
 }
