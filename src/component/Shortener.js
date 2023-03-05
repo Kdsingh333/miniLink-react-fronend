@@ -18,7 +18,7 @@ export default function Shortener() {
             let data = { text };
             console.log(data);
 
-            fetch("http://localhost:5000/shorten", {
+            fetch("https://url-shortener-service-3t2m.onrender.com/shorten", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',
