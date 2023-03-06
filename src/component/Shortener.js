@@ -1,7 +1,7 @@
 import React from 'react'
 import bgMobile from "../images/bg-shorten-mobile.svg";
 import bgDesktop from "../images/bg-shorten-desktop.svg";
-import { useState } from 'react';
+import { useState} from 'react';
 
 export default function Shortener() {
     const [text, setText] = useState("");
@@ -18,7 +18,7 @@ export default function Shortener() {
             let data = { text };
             console.log(data);
 
-            fetch("https://url-shortener-service-3t2m.onrender.com/shorten", {
+            fetch("https://urs.onrender.com/shorten", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',

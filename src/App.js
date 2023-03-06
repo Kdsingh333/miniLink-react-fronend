@@ -4,25 +4,28 @@ import Boost from "./component/Boost";
 import Advanced from "./component/Advanced";
 import Showcase from "./component/Showcase";
 import Shortner from "./component/Shortener";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
 function App() {
   const [starter, setstarter] = useState("");
 
-  fetch("https://url-shortener-service-3t2m.onrender.com/")
-    .then((resp) => {
-      resp.json().then((result) => {
-        console.warn("result", result)
-        setstarter(result);
+  useEffect(() => {
+    fetch("https://urs.onrender.com/")
+      .then((resp) => {
+        resp.json().then((result) => {
+          console.warn("result", result)
+          setstarter(result);
 
 
+        })
       })
-    })
 
-  console.log(starter);
-
+      
+      
+    }, []);
+    console.log(starter);
 
   return (
     <div>
