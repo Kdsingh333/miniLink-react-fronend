@@ -1,12 +1,13 @@
 import React from 'react';
 import brand from "../images/icon-brand-recognition.svg";
 import records from "../images/icon-detailed-records.svg";
-import fully from "../images/icon-fully-customizable.svg"
+import fully from "../images/icon-fully-customizable.svg";
+import './advance.css'
 
 export default function Advanced() {
     return (
         <>
-            <section className="bg-gray-100 py-10 lg:py-20">
+            <section className= "pun bg-gray-100 py-10 lg:py-20 md:pt-5 "  >
                 <div className='max-width'>
                     <h2 className='text-4xl font-bold text-slate-800 mb-3 text-center'>Advanced Statistics</h2>
                     <p className='text-slate-400 text-center mb-10 lg:mb-20'>Track how your links are performing across the web with our

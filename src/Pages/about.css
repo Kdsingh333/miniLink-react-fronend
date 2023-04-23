@@ -1,0 +1,37 @@
+.intro{
+    text-align:left;
+    width: auto;
+    height: 200px;
+    padding: 0px 30px 0px;
+}
+.intro>h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    
+
+}
+.intro>h2>span{
+   color: green;
+}
+
+.intro>p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-card{
+    width: 300px;
+    height: 400px;
+    margin: 40px 40px 10px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.about-card>div>img{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(195, 242, 195);
+    border-radius: 60%;
+   
+}

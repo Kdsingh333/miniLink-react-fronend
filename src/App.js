@@ -1,10 +1,12 @@
 import Header from "./component/Header";
 import Footer from "./component/Footer";
-import Boost from "./component/Boost";
-import Advanced from "./component/Advanced";
-import Showcase from "./component/Showcase";
-import Shortner from "./component/Shortener";
+import Home from "./Pages/Home"
+import Pricing from "./Pages/Pricing"
+import About from "./Pages/About"
+
 import { useState, useEffect } from 'react';
+
+import {Routes,Route} from "react-router-dom"
 
 
 
@@ -29,13 +31,15 @@ function App() {
 
   return (
     <div>
-
-      <Header />
-      <Showcase />
-      <Shortner />
-      <Advanced />
-      <Boost />
-      <Footer />
+     
+        <Header />
+        <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="/pricing" element={<Pricing/>} />
+         <Route path="/about" element={<About/>} />
+        </Routes>
+        <Footer />
+      
 
     </div>
   );
