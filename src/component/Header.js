@@ -24,7 +24,7 @@ function Header() {
                   <Link to="/pricing" className="text-slate-400">Pricing</Link>
                 </li>
                 <li>
-                  <Link to="/" className="text-slate-400">Resources</Link>
+                  <Link  className="text-slate-400">Resources</Link>
                 </li>
               </ul>
             </nav>
@@ -35,13 +35,16 @@ function Header() {
               <nav className="md:hidden">
                 <ul className="flex flex-col items-center justify-center">
                   <li>
-                    <Link to="/features" >Features</Link>
+                    <Link to="/home" >Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about" >About us</Link>
                   </li>
                   <li className="my-5">
                     <Link to="/pricing" >Pricing</Link>
                   </li>
                   <li>
-                    <Link to="/resource" >Resources</Link>
+                    <Link  >Resources</Link>
                   </li>
                 </ul>
               </nav>
