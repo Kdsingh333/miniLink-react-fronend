@@ -3,8 +3,30 @@ import './header.css'
 // import "./Header.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+
+import { useAuth0 } from '@auth0/auth0-react';
+
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button className="text-slate-400" onClick={() => loginWithRedirect()}>Login</button>;
+};
+
+const LogoutButton = () => {
+  const { logout } = useAuth0();
+  
+
+  return (
+    <button  className="btn-cta rounded-full" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>
+  );
+};
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const {  isAuthenticated } = useAuth0();
   return (
     <>
       <header className="header max-width py-5">
@@ -35,7 +57,7 @@ function Header() {
               <nav className="md:hidden">
                 <ul className="flex flex-col items-center justify-center">
                   <li>
-                    <Link to="/home" >Home</Link>
+                    <Link to="/" >Home</Link>
                   </li>
                   <li>
                     <Link to="/about" >About us</Link>
@@ -61,11 +83,13 @@ function Header() {
 
           <div className="hidden md:block">
             <ul className="flex items-center ml-5">
+              
               <li className="my-5 md:my-0 md:mr-5">
-                <button className="text-slate-400">Login</button>
+              {isAuthenticated ? <LogoutButton /> : <LoginButton />}
               </li>
               <li>
-                <button className="btn-cta rounded-full">Sign Up</button>
+              {isAuthenticated ? null : <button className="btn-cta rounded-full">Sign Up</button>}
+                
               </li>
             </ul>
           </div>
